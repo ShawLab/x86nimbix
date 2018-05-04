@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.1-devel-centos7
+FROM nvidia/cuda:9.1-cudnn7-devel-centos7
 ADD /helloWorld /usr/bin/
 RUN yum -y update; yum clean all
 RUN yum -y install make
