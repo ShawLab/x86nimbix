@@ -4,6 +4,9 @@ RUN yum -y update; yum clean all
 RUN yum -y install make
 RUN yum -y install emacs
 RUN yum -y install sudo zip unzip 
+RUN yum -y install *gcc* *g++* compat-libstdc++* glibc-statc libstdc++-static
+RUN yum -y reinstall gcc
+
 RUN echo "nimbix ALL=(ALL:ALL) ALL" >> /etc/sudoers
 RUN yum -y groupinstall "Development Tools"
 RUN yum -y install openssh-server; yum clean all
